@@ -2,6 +2,7 @@ NAME	:= getcpu
 CC		:= gcc
 CFLAGS	:= -Wall -Wextra -Werror
 SRCS	:= main.c
+BIN		:= /usr/local/bin
 
 all: $(NAME)
 
@@ -12,3 +13,6 @@ clean:
 	rm -f $(NAME)
 
 re: clean all
+
+install: $(BIN)
+	install $(NAME) $(BIN)
